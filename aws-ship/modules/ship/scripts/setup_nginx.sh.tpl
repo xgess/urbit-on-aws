@@ -43,9 +43,8 @@ sudo ln -s /etc/nginx/sites-available/${DOMAIN} /etc/nginx/sites-enabled
 sudo service nginx restart
 echo "nginx is now ready to go"
 
-# TODO: uncomment this after 6 May 2021 when letsencrypt stops throttling me
 # set up certbot and get a TLS certificate from letsencrypt
-# sudo certbot --register-unsafely-without-email --agree-tos -d ${DOMAIN} -d www.${DOMAIN} --non-interactive --nginx --redirect
-# sudo systemctl enable certbot.timer
-# sudo systemctl start certbot.timer
+sudo certbot --register-unsafely-without-email --agree-tos -d ${DOMAIN} -d www.${DOMAIN} --non-interactive --nginx --redirect
+sudo systemctl enable certbot.timer
+sudo systemctl start certbot.timer
 
