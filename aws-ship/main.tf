@@ -3,6 +3,10 @@ provider "aws" {
   region  = var.aws_region
 }
 
+terraform {
+  backend "s3" {}
+}
+
 locals {
   common_tags = {
     "Purpose"   = "urbit"

@@ -3,6 +3,8 @@ keys/*.pem
 ships/**/*
 aws-ship/rendered-scripts/**/*
 aws-ship/terraform.tfvars
+aws-ship/backend.config
+aws-infra/terraform.tfvars
 **/terraform.tfstate*
 **/.terraform
 **/terraform.plan
