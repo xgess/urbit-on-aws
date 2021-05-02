@@ -1,0 +1,9 @@
+config.mk
+keys/*.pem
+ships/**/*
+aws-ship/rendered-scripts/**/*
+aws-ship/terraform.tfvars
+**/terraform.tfstate*
+**/.terraform
+**/terraform.plan
+

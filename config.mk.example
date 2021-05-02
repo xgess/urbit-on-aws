@@ -1,0 +1,9 @@
+export AWS_PROFILE=urbit
+export AWS_REGION=us-east-2
+
+export DOMAIN=example.com
+export SHIP=sampel-palnet
+export SHIP_PATH=ships/$(SHIP)
+export SSH_KEY_NAME=urbit-sampel-palnet-us-east-2.pem 
+export SSH_KEY_PATH=./keys/$(SSH_KEY_NAME) 
+
