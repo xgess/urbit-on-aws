@@ -1,4 +1,4 @@
-export AWS_PROFILE=urbit
+export AWS_PROFILE=default
 export AWS_REGION=us-east-2
 
 export DOMAIN=example.com
