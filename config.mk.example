@@ -4,6 +4,13 @@ export AWS_REGION=us-east-2
 export DOMAIN=example.com
 export SHIP=sampel-palnet
 export SHIP_PATH=ships/$(SHIP)
-export SSH_KEY_NAME=urbit-sampel-palnet-us-east-2.pem 
-export SSH_KEY_PATH=./keys/$(SSH_KEY_NAME) 
+export SSH_KEY_NAME=urbit-sampel-palnet-us-east-2.pem
+export SSH_KEY_PATH=./keys/$(SSH_KEY_NAME)
 
+# aws-infra config - if you already have a key or would
+# like to manage it separately, set this to false, and
+# make sure SSH_KEY_PATH is accurate
+# for finding the key locally (only used for ssh commands)
+# and that the name of the key is correct in AWS. And that
+# the key is in the same region in which you are deploying.
+export GENERATE_NEW_AWS_KEY_PAIR=true
