@@ -117,3 +117,10 @@ make aws-infra-destroy
 
 ### Questions
 if you have them, open an issue and maybe i'll take a look. no promises. :)
+
+## TODOs
+* expose the ames-port as a top-level parameter. it's currently assumed to be something, but it really should be configurable.
+* there's an existing urbit ACME flow that can expose your planet at `sampel-palnet.arvo.network` so no reason not to do that also. or maybe even give an option to do that instead of using a custom url.
+* use a data.external to create the ssh key if it's not there already. just generally, i can make that little chunk of code a little cleaner.
+* encrypt the EBS volume, or consider migrating to EFS which is maybe a better fit
+
