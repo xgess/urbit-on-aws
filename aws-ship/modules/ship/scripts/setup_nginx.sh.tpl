@@ -1,6 +1,16 @@
 #!/bin/bash
 set -eo pipefail
 
+
+if [[ -f "/etc/nginx/sites-available/${DOMAIN}" ]]; then
+    echo "nginx has already created the basic site"
+    certbot_has_already_run=$(grep "listen 443 ssl; # managed by Certbot" "/etc/nginx/sites-available/${DOMAIN}")
+    if [ ! -z "$certbot_has_already_run" ]; then
+        echo "certbot has already configured a cert. bailing."
+        exit 0
+    fi
+fi
+
 # install some basic dependencies
 sudo apt update
 sudo apt install nginx certbot python3-certbot-nginx -y

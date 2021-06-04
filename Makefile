@@ -18,7 +18,7 @@ ssh-go:
 	ssh -i $(SSH_KEY_PATH) ubuntu@${IP_ADDRESS}
 
 ssh-push-scripts:
-	scp -i $(SSH_KEY_PATH) -r aws/rendered-scripts/ ubuntu@$(IP_ADDRESS):/home/ubuntu/
+	scp -i $(SSH_KEY_PATH) -r aws-ship/rendered-scripts ubuntu@$(IP_ADDRESS):/home/ubuntu/
 
 ssh-script-%: SCRIPT=$*
 ssh-script-%:
