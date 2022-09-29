@@ -87,6 +87,7 @@ make push-ship
 ```
 1. now let's start it and get everything else on the instance spun up and ready to go.
 ```
+make ssh-push-scripts
 make ssh-script-start_urbit
 make ssh-script-setup_nginx
 make ssh-script-add_s3_uploads
