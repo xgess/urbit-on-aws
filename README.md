@@ -69,7 +69,7 @@ make aws-infra-apply
 now you have infrastructure for deploying infrastructure as code. cool!
 1. set up `aws-ship`
 ```
-make aws-ship-terraform-tfvars
+make aws-ship-terraform.tfvars
 make aws-ship-init
 make aws-ship-plan
 ```
@@ -87,6 +87,7 @@ make push-ship
 ```
 1. now let's start it and get everything else on the instance spun up and ready to go.
 ```
+make ssh-push-scripts
 make ssh-script-start_urbit
 make ssh-script-setup_nginx
 make ssh-script-add_s3_uploads
