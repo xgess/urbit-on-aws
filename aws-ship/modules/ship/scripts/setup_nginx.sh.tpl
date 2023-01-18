@@ -23,7 +23,7 @@ echo "placeholder" > /var/www/${DOMAIN}/html/index.html
 
 cat > ~/nginx-config <<EOL
 server {
-    root /var/www/spacemetaphor.com/html;
+    root /var/www/${DOMAIN}/html;
 
     index index.html;
 

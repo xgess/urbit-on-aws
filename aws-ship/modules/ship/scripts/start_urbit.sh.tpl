@@ -13,9 +13,9 @@ cd /data
 sudo mkdir -p /data/urbit
 sudo chown -R ${USERNAME}:${USERNAME} /data/urbit
 cd /data/urbit
-wget --content-disposition https://urbit.org/install/linux64/latest
-tar zxvf ./linux64.tgz --strip=1
-rm linux64.tgz
+wget --content-disposition https://urbit.org/install/linux-x86_64/latest
+tar zxvf ./linux-x86_64.tgz --transform='s/.*/urbit/g'
+rm linux-x86_64.tgz
 
 echo "hopping into a tmux session to run the urbit process"
 tmux new -d -s ${TMUX_SESSION_NAME} || true
